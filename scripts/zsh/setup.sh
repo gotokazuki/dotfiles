@@ -24,12 +24,11 @@ do
   printf '\033[32m%s\033[m\n' "$file is created"
 done
 
-echo "
 for file in $ZSH_CONFIG_DIR/*
 do
-  [ -r "$file" ] && source "$file" >> $ZDOTDIR/.zshrc
+  echo "[ -r \"$file\" ] && source \"$file\"" >> $ZDOTDIR/.zshrc
 done
-"
+
 printf '\033[32m%s\033[m\n' '.zshrc is updated'
 
 printf '\033[32m%s\033[m\n' "$TOOL_NAME setup and zimfw setup are completed"
