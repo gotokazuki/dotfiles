@@ -20,7 +20,6 @@
 [core]
   excludesfile = ~/.gitignore_global
   quotepath = false
-#   editor = /usr/local/bin/nvim
 [diff]
   tool = vimdiff
 [difftool]

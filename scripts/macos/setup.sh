@@ -1,5 +1,8 @@
 #!/bin/sh
 
+TOOL_NAME='macos'
+printf '\033[32m%s\033[m\n' "$TOOL_NAME setup is started..."
+
 ## keyboard
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
@@ -35,3 +38,4 @@ defaults write com.apple.screencapture type -string "png"
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
+printf '\033[32m%s\033[m\n' "$TOOL_NAME setup is completed"

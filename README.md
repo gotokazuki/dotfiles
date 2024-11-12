@@ -2,21 +2,43 @@
 
 ## 前準備
 
-### Command Line Tools をインストール
+いくつか事前に手動でインストールする
 
-see :eyes: https://developer.apple.com/download/more/
+### Xcode Command Line Tools
 
-### Command Line Tools を利用する
+インストール
+確認ダイアログあり
+数分かかる
 
 ```shell
-sudo xcode-select --switch /Library/Developer/CommandLineTools
+xcode-select --install
 ```
 
-### Homebrew をインストール
+確認
+
+```shell
+xcode-select -p
+```
+
+### Homebrew
+
+インストール
+パスワード入力あり
+確認あり
+
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
 https://brew.sh
 
-### rosseta をインストール
+### rosseta
+
+Intel ベースのアプリケーションを動作させるための設定
+
+インストール
+パスワード入力あり
+確認あり
 
 ```shell
 sudo softwareupdate --install-rosetta
@@ -24,54 +46,25 @@ sudo softwareupdate --install-rosetta
 
 ## 設定
 
-### zimfw をインストール
+### zimfw
+
+terminal 再起動が必要
 
 https://zimfw.sh/#install
 
-### powerlevel10k をインストール
-
-https://github.com/romkatv/powerlevel10k#installation
-
-### goenv, go をインストール
-
-homebrew の goenv は更新されていないみたいなので、 git clone して利用する
-
 ```shell
-git clone https://github.com/syndbg/goenv.git ~/.goenv
+url -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 ```
 
-```shell
-# 最新バージョンをインストールする
-goenv install 1.18.0
-goenv global 1.18.0
-```
+`.zshrc` と `.zimrc` が作成される
 
-### git, macOSの設定
+### macOS, Git, Zsh, Neovim WezTerm, Homebrew の設定
 
 以下のスクリプトを実行する
 
 ```shell
-./update_zshrc.sh
-./git_files.sh
-./configure_macos_env.sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/gotokazuki/dotfiles/main/initialize.sh)"
 ```
-
-macOS の設定を反映するため PC を再起動する
-
-### Homebrew でアプリケーションをインストール
-
-```shell
-brew bundle
-```
-
-nerdctl などで lima を使いたい場合
-
-```shell
-limactl start
-```
-
-バグかわからないが一度 `limactl stop` してから再度 `limactl start` するとうまくいった
-#31 で調査中
 
 ### Git User と Email を設定する
 
@@ -84,7 +77,7 @@ limactl start
 
 ## ローカル設定
 
-`.zshrc.local` は git 管理されていないので、ここに追記する
+`.zshrc.local` は git 管理していないので、ここに追記する
 
 ## その他
 
@@ -94,7 +87,7 @@ limactl start
 ssh-keygen -t ed25519 -C "{your_email_address}"
 ```
 
-passphrase は10桁以上にしておかないと解析されるリスクがあります
+passphrase は最低でも 10 桁以上にする
 
 ### ssh key の passphrase を KeyChain に登録する
 
@@ -103,10 +96,6 @@ $ ssh-add -K ~/.ssh/id_ed25519
 Enter passphrase for /User/{user_name}/.ssh/id_ed25519:
 Identity added: /Users/{user_name}/.shh/id_ed25519
 ```
-
-### iTerm2 の設定
-
-iterm2 の Profilee 設定で `iterm2/settings.json` を import する
 
 ### IME の設定
 
