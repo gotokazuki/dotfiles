@@ -10,7 +10,7 @@ mkdir -p $CONFIG_HOME
 export ZDOTDIR=$CONFIG_HOME
 export ZIM_HOME=$CONFIG_HOME
 
-source <(curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh)
+source <(curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh)
 source $ZDOTDIR/.zshrc
 
 touch $HOME/.zshenv
