@@ -1,9 +1,6 @@
 #!/bin/zsh
 
-if [[ "$1" == "--debug" ]]; then
-  set -x
-fi
-set -e
+set -ex
 
 TOOL_NAME='wezterm'
 printf '\033[32m%s\033[m\n' "$TOOL_NAME setup is started..."
