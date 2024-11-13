@@ -1,4 +1,9 @@
-#!/bin/bash
+#!/bin/zsh
+
+if [[ "$1" == "--debug" ]]; then
+  set -x
+fi
+set -e
 
 TOOL_NAME='zsh'
 printf '\033[32m%s\033[m\n' "$TOOL_NAME setup is started..."
