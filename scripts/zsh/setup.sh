@@ -5,19 +5,25 @@ printf '\033[32m%s\033[m\n' "$TOOL_NAME setup and zimfw setup are started..."
 
 CONFIG_HOME=$HOME/.config/$TOOL_NAME
 
-echo "export ZDOTDIR=$CONFIG_HOME" > $HOME/.zshenv
+export ZDOTDIR=$CONFIG_HOME
+export ZIM_HOME=$CONFIG_HOME
+
+touch $HOME/.zshenv
+echo "export ZDOTDIR=$CONFIG_HOME" >> $HOME/.zshenv
+echo "export ZIM_HOME=$CONFIG_HOME" >> $HOME/.zshenv
 
 mkdir -p $CONFIG_HOME
 mv $HOME/.zshrc $CONFIG_HOME/.zshrc
+mv $HOME/.zim $CONFIG_HOME
 
 ## add abbr
 echo 'zmodule olets/zsh-abbr' >> $HOME/.zimrc
 source $HOME/.zim/zimfw.zsh install
 
 ## load zsh config files
-ZSH_CONFIG_DIR=$ZDOTDIR/.zshrc.d
+ZSH_CONFIG_DIR=$CONFIG_HOME/config
 mkdir -p $ZSH_CONFIG_DIR
-ZSH_FILES=( zshrc.path zshrc.base zshrc.abbr zshrc.alias zshrc.opt )
+ZSH_FILES=( path.zsh base.zsh abbr.zsh alias.zsh opt.zsh )
 
 for file in ${ZSH_FILES[@]}
 do
