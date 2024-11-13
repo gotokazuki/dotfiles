@@ -1,7 +1,7 @@
 #!/bin/bash
 
 TOOL_NAME='zsh'
-printf '\033[32m%s\033[m\n' "$TOOL_NAME setup and zimfw setup are started..."
+printf '\033[32m%s\033[m\n' "$TOOL_NAME setup is started..."
 
 CONFIG_HOME=$HOME/.config/$TOOL_NAME
 
@@ -18,7 +18,7 @@ mv $HOME/.zim $CONFIG_HOME
 
 ## add abbr
 echo 'zmodule olets/zsh-abbr' >> $HOME/.zimrc
-source $HOME/.zim/zimfw.zsh install
+source $CONFIG_HOME/.zim/zimfw.zsh install
 
 ## load zsh config files
 ZSH_CONFIG_DIR=$CONFIG_HOME/config
@@ -38,4 +38,4 @@ done
 
 printf '\033[32m%s\033[m\n' '.zshrc is updated'
 
-printf '\033[32m%s\033[m\n' "$TOOL_NAME setup and zimfw setup are completed"
+printf '\033[32m%s\033[m\n' "$TOOL_NAME setup is completed"
