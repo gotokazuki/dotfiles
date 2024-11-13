@@ -12,13 +12,13 @@ TOML_FILES=( dein.toml dein_lazy.toml )
 for file in ${FILES[@]}
 do
   curl -fsSL https://raw.githubusercontent.com/gotokazuki/dotfiles/main/files/$TOOL_NAME/$file -o $CONFIG_HOME/$file
-  printf '\033[32m%s\033[m\n' "$file is created"
+  printf '\033[32m%s\033[m\n' "  $file is created"
 done
 
 for file in ${TOML_FILES[@]}
 do
   curl -fsSL https://raw.githubusercontent.com/gotokazuki/dotfiles/main/files/$TOOL_NAME/toml/$file -o $CONFIG_HOME/toml/$file
-  printf '\033[32m%s\033[m\n' "$file is created"
+  printf '\033[32m%s\033[m\n' "  $file is created"
 done
 
 printf '\033[32m%s\033[m\n' "$TOOL_NAME setup is completed"
