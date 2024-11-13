@@ -53,7 +53,7 @@ terminal 再起動が必要
 https://zimfw.sh/#install
 
 ```shell
-url -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 ```
 
 `.zshrc` と `.zimrc` が作成される
