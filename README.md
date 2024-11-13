@@ -63,7 +63,7 @@ curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | 
 以下のスクリプトを実行する
 
 ```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/gotokazuki/dotfiles/main/initialize.sh)"
+source <(curl -fsSL https://raw.githubusercontent.com/gotokazuki/dotfiles/main/initialize.sh)
 ```
 
 ### Git User と Email を設定する
