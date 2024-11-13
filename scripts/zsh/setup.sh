@@ -18,7 +18,7 @@ echo "export ZDOTDIR=$CONFIG_HOME" >> $HOME/.zshenv
 echo "export ZIM_HOME=$CONFIG_HOME" >> $HOME/.zshenv
 
 ## add abbr
-echo 'zmodule olets/zsh-abbr' >> $HOME/.zimrc
+echo 'zmodule olets/zsh-abbr' >> $CONFIG_HOME/.zimrc
 source $CONFIG_HOME/.zim/zimfw.zsh install
 
 ## load zsh config files
