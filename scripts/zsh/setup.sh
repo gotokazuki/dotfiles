@@ -5,6 +5,9 @@ printf '\033[32m%s\033[m\n' "$TOOL_NAME setup and zimfw setup are started..."
 
 ## set ZDOTDIR
 export ZDOTDIR=$HOME/.config/$TOOL_NAME
+
+echo "export ZDOTDIR=$ZDOTDIR" > $HOME/.zshenv
+
 mkdir -p $ZDOTDIR
 mv $HOME/.zshrc $ZDOTDIR/.zshrc
 
@@ -16,7 +19,7 @@ source $ZIM_HOME/zimfw.zsh install
 ## load zsh config files
 ZSH_CONFIG_DIR=$ZDOTDIR/.zshrc.d
 mkdir -p $ZSH_CONFIG_DIR
-ZSH_FILES=( .zshrc.path .zshrc.base .zshrc.abbr .zshrc.alias .zshrc.opt )
+ZSH_FILES=( zshrc.path zshrc.base zshrc.abbr zshrc.alias zshrc.opt )
 
 for file in ${ZSH_FILES[@]}
 do
