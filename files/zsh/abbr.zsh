@@ -1,6 +1,6 @@
 abbr -S -f ls='eza'
 abbr -S -f ll='eza -1'
-abbr -S -f la='eza -aghHl'
+abbr -S -f la='eza --icons --git --time-style relative -aghHl'
 abbr -S -f cat='ccat'
 abbr -S -f tree='eza -T'
 abbr -S -f vi='nvim'
