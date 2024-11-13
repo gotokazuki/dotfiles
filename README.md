@@ -44,6 +44,12 @@ Intel ベースのアプリケーションを動作させるための設定
 sudo softwareupdate --install-rosetta
 ```
 
+### brew bundle
+
+```shell
+brew bundle --file=<(curl -fsSL https://raw.githubusercontent.com/gotokazuki/dotfiles/main/files/homebrew/Brewfile)
+```
+
 ## 設定
 
 ### zimfw
@@ -52,13 +58,7 @@ terminal 再起動が必要
 
 https://zimfw.sh/#install
 
-```shell
-curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
-```
-
-`.zshrc` と `.zimrc` が作成される
-
-### macOS, Git, Zsh, Neovim WezTerm, Homebrew の設定
+### macOS, Git, Zsh, Neovim WezTerm の設定
 
 以下のスクリプトを実行する
 
