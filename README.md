@@ -47,7 +47,7 @@ sudo softwareupdate --install-rosetta
 ### brew bundle
 
 ```shell
-brew bundle --file=<(curl -fsSL https://raw.githubusercontent.com/gotokazuki/dotfiles/main/files/homebrew/Brewfile)
+/opt/homebrew/bin/brew bundle -v --file=<(curl -fsSL https://raw.githubusercontent.com/gotokazuki/dotfiles/main/files/homebrew/Brewfile)
 ```
 
 ## 設定
