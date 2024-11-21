@@ -24,7 +24,7 @@ source $CONFIG_HOME/.zim/zimfw.zsh install
 ## load zsh config files
 ZSH_CONFIG_DIR=$CONFIG_HOME/config
 mkdir -p $ZSH_CONFIG_DIR
-ZSH_FILES=( path.zsh base.zsh abbr.zsh alias.zsh opt.zsh )
+ZSH_FILES=( export.zsh base.zsh abbr.zsh alias.zsh opt.zsh function.zsh )
 
 for file in ${ZSH_FILES[@]}
 do

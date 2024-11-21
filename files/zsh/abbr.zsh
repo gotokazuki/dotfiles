@@ -14,6 +14,8 @@ abbr -S -f ta='terraform apply'
 abbr -S -f td='terraform destroy'
 abbr -S -f tf='terraform fmt -recursive'
 abbr -S -f awslocal='aws --endpoint-url=http://localhost:4566 --profile localstack'
+abbr -S -f 'zed /'='zed .'
+abbr -S -f 'code /'='code .'
 
 abbr git -S -f st="status --short --branch"
 abbr git -S -f co="checkout"
@@ -25,7 +27,7 @@ abbr git -S -f ad="add"
 abbr git -S -f rb="rebase"
 abbr git -S -f pl="pull"
 abbr git -S -f plr="pull --rebase"
-abbr git -S -f cp="cherry-pick"
+abbr git -S -f chp="cherry-pick"
 abbr git -S -f lg="log --graph --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 abbr git -S -f lga="log --graph --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all"
 abbr git -S -f lgns="log --graph --color --decorate --oneline --name-status"
