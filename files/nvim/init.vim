@@ -63,16 +63,16 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
-let s:dein_dir = expand('~/dotfiles/nvim/dein')
+let s:dein_dir = expand('~/.config/nvim/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
-let s:toml_dir = expand('~/dotfiles/nvim/toml')
+let s:toml_dir = expand('~/.config/nvim/toml')
 
 if !isdirectory(s:dein_repo_dir)
   execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
 endif
 
 " Required:
-set runtimepath+=~/dotfiles/nvim/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.config/nvim/dein/repos/github.com/Shougo/dein.vim
 
 
 if dein#load_state(s:dein_dir)
