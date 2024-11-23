@@ -18,7 +18,7 @@
   status = auto
   branch = auto
 [core]
-  excludesfile = ~/.gitignore_global
+  excludesfile = ~/.config/git/ignore
   quotepath = false
 [diff]
   tool = vimdiff
