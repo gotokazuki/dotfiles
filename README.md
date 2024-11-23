@@ -75,10 +75,6 @@ source <(curl -fsSL https://raw.githubusercontent.com/gotokazuki/dotfiles/main/i
 適当なファイルを neovim で開く
 しばらく待つとプラグインがインストールされる
 
-## ローカル設定
-
-`.zshrc.local` は git 管理していないので、ここに追記する
-
 ## その他
 
 ### ssh key を作る
@@ -95,6 +91,16 @@ passphrase は最低でも 10 桁以上にする
 $ ssh-add -K ~/.ssh/id_ed25519
 Enter passphrase for /User/{user_name}/.ssh/id_ed25519:
 Identity added: /Users/{user_name}/.shh/id_ed25519
+```
+
+### ssh passphrase 入力の省略
+
+`~/.ssh/config` を作成する
+
+```
+Host *
+  UseKeychain yes
+  AddKeysToAgent yes
 ```
 
 ### IME の設定
