@@ -37,6 +37,8 @@ do
   echo "[ -r \"$file\" ] && source \"$file\"" >> $ZDOTDIR/.zshrc
 done
 
+echo "eval \"$(starship init zsh)\"" >> $ZDOTDIR/.zshrc
+
 printf '\033[32m%s\033[m\n' '  .zshrc is updated'
 
 printf '\033[32m%s\033[m\n' "$TOOL_NAME setup is completed"
