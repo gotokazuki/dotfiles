@@ -1,3 +1,6 @@
+local home = os.getenv('HOME')
+package.path = home .. '/.config/wezterm/?.lua;' .. package.path
+
 local wezterm = require 'wezterm'
 local keybinds = require 'keybinds'
 
