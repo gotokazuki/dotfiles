@@ -16,6 +16,7 @@ abbr -S -f tf='terraform fmt -recursive'
 abbr -S -f awslocal='aws --endpoint-url=http://localhost:4566 --profile localstack'
 abbr -S -f 'zed /'='zed .'
 abbr -S -f 'code /'='code .'
+abbr -S -f 'gitprune'='git branch --merged | grep -Ev "\*|develop|main|master" | xargs git branch -d'
 
 abbr git -S -f st="status --short --branch"
 abbr git -S -f co="checkout"

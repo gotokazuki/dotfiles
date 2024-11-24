@@ -9,7 +9,7 @@
   rb = rebase
   pl = pull
   plr = pull --rebase
-  cp = cherry-pick
+  chp = cherry-pick
   lg   = log --graph --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   lga  = log --graph --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
   lgns = log --graph --color --decorate --oneline --name-status
@@ -33,4 +33,4 @@
 [pull]
   rebase = false
 [includeIf "gitdir:~/ghq/github.com/"]
-  path = ~/.gitconfig.github
+  path = ~/.config/git/.gitconfig.github
