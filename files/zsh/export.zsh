@@ -34,3 +34,6 @@ export EDITOR="vim"
 
 # terraform
 export GODEBUG=asyncpreemptoff=1
+
+# starship
+export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship/starship.toml
