@@ -8,7 +8,7 @@ printf '\033[32m%s\033[m\n' "$TOOL_NAME setup is started..."
 CONFIG_HOME=$HOME/.config/$TOOL_NAME
 mkdir -p $CONFIG_HOME
 
-FILES=( .gitconfig .gitconfig.github .gitignore_global )
+FILES=( config .gitconfig.github ignore )
 
 for file in ${FILES[@]}
 do
