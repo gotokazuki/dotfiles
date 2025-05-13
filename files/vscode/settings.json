@@ -1,0 +1,37 @@
+{
+    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "editor.formatOnSave": false,
+    "editor.fontSize": 12,
+    "editor.fontFamily": "'Monaspace Krypton', 'Symbols Nerd Font Mono', Menlo, Monaco, monospace",
+    "editor.fontLigatures": true,
+    "editor.tabSize": 2,
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "all",
+    "editor.wordWrap": "off",
+    "files.exclude": {
+        "**/.git": false
+    },
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[terraform]": {
+        "editor.defaultFormatter": "hashicorp.terraform"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    }
+}
