@@ -27,9 +27,6 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowTabView -bool true
 defaults write com.apple.finder AppleShowAllFiles YES
 
-# battery
-defaults write com.apple.menuextra.battery ShowPercent -string "YES"
-
 # clock
 defaults write com.apple.menuextra.clock ShowSeconds -bool true
 killall SystemUIServer
