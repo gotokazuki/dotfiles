@@ -1,34 +1,39 @@
-abbr -S -f ls='eza'
-abbr -S -f ll='eza -1'
-abbr -S -f la='eza --icons --git --time-style relative -aghHl'
-abbr -S -f cat='ccat'
-abbr -S -f tree='eza -T'
-abbr -S -f vi='nvim'
-abbr -S -f diff='colordiff -u'
-abbr -S -f top='htop'
-abbr -S -f reload='exec zsh -l'
-abbr -S -f k='kubectl'
-abbr -S -f ti='terraform init'
-abbr -S -f tp='terraform plan'
-abbr -S -f ta='terraform apply'
-abbr -S -f td='terraform destroy'
-abbr -S -f tf='terraform fmt -recursive'
-abbr -S -f awslocal='aws --endpoint-url=http://localhost:4566 --profile localstack'
-abbr -S -f 'zed /'='zed .'
-abbr -S -f 'code /'='code .'
-abbr -S -f 'gitprune'='git branch --merged | grep -Ev "\*|develop|main|master" | xargs git branch -d'
+{
+  abbr --force --quiet ls='eza'
+  abbr --force --quiet ll='eza -1'
+  abbr --force --quiet la='eza --icons --git --time-style relative -aghHl'
+  abbr --force --quiet cat='ccat'
+  abbr --force --quiet tree='eza -T'
+  abbr --force --quiet vi='nvim'
+  abbr --force --quiet diff='colordiff -u'
+  abbr --force --quiet top='htop'
+  abbr --force --quiet 'zed /'='zed .'
+} > /dev/null
 
-abbr git -S -f st="status --short --branch"
-abbr git -S -f co="checkout"
-abbr git -S -f fe="fetch"
-abbr git -S -f br="branch"
-abbr git -S -f ci="commit"
-abbr git -S -f cia="commit --amend"
-abbr git -S -f ad="add"
-abbr git -S -f rb="rebase"
-abbr git -S -f pl="pull"
-abbr git -S -f plr="pull --rebase"
-abbr git -S -f chp="cherry-pick"
-abbr git -S -f lg="log --graph --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
-abbr git -S -f lga="log --graph --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all"
-abbr git -S -f lgns="log --graph --color --decorate --oneline --name-status"
+# reload zsh
+abbr --force --quiet reload='exec zsh -l'
+
+# k8s
+abbr --force --quiet k='kubectl'
+
+# terraform
+abbr --force --quiet ti='terraform init'
+abbr --force --quiet tp='terraform plan'
+abbr --force --quiet ta='terraform apply'
+abbr --force --quiet td='terraform destroy'
+abbr --force --quiet tf='terraform fmt -recursive'
+
+# localstack
+abbr --force --quiet awslocal='aws --endpoint-url=http://localhost:4566 --profile localstack'
+
+# git
+abbr git --force --quiet st="status --short --branch"
+abbr git --force --quiet co="checkout"
+abbr git --force --quiet fe="fetch"
+abbr git --force --quiet br="branch"
+abbr git --force --quiet ci="commit"
+abbr git --force --quiet cia="commit --amend"
+abbr git --force --quiet chp="cherry-pick"
+abbr git --force --quiet lg="log --graph --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+abbr git --force --quiet lga="log --graph --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all"
+abbr git --force --quiet lgns="log --graph --color --decorate --oneline --name-status"
