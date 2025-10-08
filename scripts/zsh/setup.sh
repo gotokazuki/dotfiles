@@ -48,7 +48,9 @@ done
 
 printf '\033[32m%s\033[m\n' "  starship config creating..."
 
-echo "eval \"$(starship init zsh)\"" >> $ZDOTDIR/.zshrc
+tee -a "$ZDOTDIR/.zshrc" >/dev/null <<'EOT'
+eval "$(starship init zsh)" 
+EOT
 
 printf '\033[32m%s\033[m\n' '  starship config is created'
 
