@@ -23,6 +23,7 @@ ZSH_FILES=( export.zsh base.zsh abbr.zsh opt.zsh function.zsh )
 
 for file in ${ZSH_FILES[@]}
 do
+  printf '\033[32m%s\033[m\n' "  $file creating..."
   curl -fsSL https://raw.githubusercontent.com/gotokazuki/dotfiles/main/files/$TOOL_NAME/$file -o $ZSH_CONFIG_DIR/$file
   printf '\033[32m%s\033[m\n' "  $file is created"
 done
