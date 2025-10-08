@@ -34,8 +34,10 @@ done
 
 printf '\033[32m%s\033[m\n' '  rz setting starting...'
 
-echo "export ZSH_AUTOSUGGEST_MANUAL_REBIND=1" >> $ZDOTDIR/.zshrc
-echo 'eval "$(${XDG_CONFIG_HOME:-$HOME}/.rz/bin/rz init)' >> $ZDOTDIR/.zshrc
+tee -a "$ZDOTDIR/.zshrc" >/dev/null <<'EOT'
+export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+eval "$(${XDG_CONFIG_HOME:-$HOME}/.rz/bin/rz init)"
+EOT
 
 printf '\033[32m%s\033[m\n' "  rz is completed"
 
