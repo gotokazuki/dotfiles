@@ -32,18 +32,6 @@ xcode-select -p
 
 https://brew.sh
 
-### rosseta
-
-Intel ベースのアプリケーションを動作させるための設定
-
-インストール
-パスワード入力あり
-確認あり
-
-```shell
-sudo softwareupdate --install-rosetta
-```
-
 ### brew bundle
 
 ```shell
@@ -52,13 +40,7 @@ sudo softwareupdate --install-rosetta
 
 ## 設定
 
-### zimfw
-
-terminal 再起動が必要
-
-https://zimfw.sh/#install
-
-### macOS, Git, Zsh, Neovim WezTerm の設定
+### macOS, Git, Zsh, Neovim などの設定
 
 以下のスクリプトを実行する
 
@@ -72,8 +54,8 @@ source <(curl -fsSL https://raw.githubusercontent.com/gotokazuki/dotfiles/main/i
 
 ### vim
 
-適当なファイルを neovim で開く
-しばらく待つとプラグインがインストールされる
+適当なファイルを NeoVim で開く
+`:Lazy sync` によりインストールされる
 
 ## その他
 
