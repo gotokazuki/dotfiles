@@ -12,7 +12,7 @@ export ZDOTDIR=$CONFIG_HOME
 export XDG_CONFIG_HOME=$XDG_CONFIG_HOME
 
 touch $HOME/.zshenv
-echo "export XDG_CONFIG_HOME=$XDG_CONFIG_HOME" >> $HOME/.zshenv
+echo "export XDG_CONFIG_HOME=$XDG_CONFIG_HOME" > $HOME/.zshenv
 echo "export ZDOTDIR=$CONFIG_HOME" >> $HOME/.zshenv
 
 ## load zsh config files
@@ -29,7 +29,7 @@ do
 done
 
 echo "export ZSH_AUTOSUGGEST_MANUAL_REBIND=1" >> $ZDOTDIR/.zshrc
-echo "eval \"$(${XDG_CONFIG_HOME:-$HOME}/.rz/bin/rz init)\"" >> $ZDOTDIR/.zshrc
+echo 'eval "$(${XDG_CONFIG_HOME:-$HOME}/.rz/bin/rz init)' >> $ZDOTDIR/.zshrc
 
 for file in $ZSH_CONFIG_DIR/*
 do
