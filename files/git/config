@@ -1,36 +1,60 @@
-[alias]
-  st = status --short --branch
-  co = checkout
-  fe = fetch
-  br = branch
-  ci = commit
-  cia = commit --amend
-  ad = add
-  rb = rebase
-  pl = pull
-  plr = pull --rebase
-  chp = cherry-pick
-  lg   = log --graph --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  lga  = log --graph --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
-  lgns = log --graph --color --decorate --oneline --name-status
+[advice]
+  statusHints = false
+[branch]
+  sort = -committerdate
 [color]
+  branch = auto
   diff = auto
   status = auto
-  branch = auto
 [core]
   excludesfile = ~/.config/git/ignore
   quotepath = false
+[delta]
+  navigate = true
+  side-by-side = true
 [diff]
+  algorithm = histogram
+  colorMoved = default
+  renames = true
   tool = vimdiff
-[difftool]
-  prompt = false
-[merge]
-  tool = vimdiff
-[mergetool]
+[difftool "vimdiff"]
+  cmd = nvim -d "$LOCAL" "$REMOTE"
   prompt = false
 [fetch]
   prune = true
+  pruneTags = true
+[gc]
+  auto = 256
+[interactive]
+  diffFilter = delta --color-only
+[init]
+  defaultBranch = main
+[log]
+  date = iso
+[merge]
+  conflictStyle = zdiff3
+  ff = only
+  stat = true
+  tool = vimdiff
+[mergetool "vimdiff"]
+  cmd = nvim -d "$LOCAL" "$BASE" "$REMOTE" "$MERGED"
+  keepBackup = false
+  prompt = false
+[pager]
+  blame = delta
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
+[push]
+  autoSetupRemote = true
+  default = simple
 [pull]
+  ff = only
   rebase = false
+[rebase]
+  autoStash = true
+[status]
+  submoduleSummary = true
 [includeIf "gitdir:~/ghq/github.com/"]
   path = ~/.config/git/.gitconfig.github

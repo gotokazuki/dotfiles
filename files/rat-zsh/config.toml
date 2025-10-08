@@ -1,0 +1,41 @@
+[[plugins]]
+source = "github"
+repo   = "zsh-users/zsh-autosuggestions"
+type   = "source"
+file   = "zsh-autosuggestions.zsh"
+
+[[plugins]]
+source = "github"
+repo   = "zsh-users/zsh-completions"
+type   = "fpath"
+fpath_dirs = ["src"]
+
+[[plugins]]
+source = "github"
+repo   = "zsh-users/zsh-syntax-highlighting"
+type   = "source"
+file   = "zsh-syntax-highlighting.zsh"
+
+[[plugins]]
+source = "github"
+repo   = "zsh-users/zsh-history-substring-search"
+type   = "source"
+file   = "zsh-history-substring-search.zsh"
+
+[[plugins]]
+source = "github"
+repo   = "olets/zsh-abbr"
+type   = "source"
+file   = "zsh-abbr.zsh"
+
+[[plugins]]
+source = "github"
+repo   = "gotokazuki/rat-zsh"
+type   = "fpath"
+fpath_dirs = ["contrib/completions/zsh"]
+
+[[plugins]]
+source = "github"
+repo   = "Aloxaf/fzf-tab"
+type   = "source"
+file   = "fzf-tab.plugin.zsh"
