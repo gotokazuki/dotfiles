@@ -19,7 +19,7 @@ echo "export ZDOTDIR=$CONFIG_HOME" >> $HOME/.zshenv
 ZSH_CONFIG_DIR=$CONFIG_HOME/config
 mkdir -p $ZSH_CONFIG_DIR
 
-ZSH_FILES=( export.zsh base.zsh abbr.zsh alias.zsh opt.zsh function.zsh )
+ZSH_FILES=( export.zsh base.zsh abbr.zsh opt.zsh function.zsh )
 
 for file in ${ZSH_FILES[@]}
 do
