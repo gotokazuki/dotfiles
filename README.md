@@ -45,7 +45,7 @@ https://brew.sh
 以下のスクリプトを実行する
 
 ```shell
-source <(curl -fsSL https://raw.githubusercontent.com/gotokazuki/dotfiles/main/initialize.sh)
+curl -fsSL https://raw.githubusercontent.com/gotokazuki/dotfiles/main/initialize.sh | zsh
 ```
 
 ### Git User と Email を設定する
