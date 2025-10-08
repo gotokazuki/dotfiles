@@ -12,6 +12,7 @@ FILES=( keybinds.lua wezterm.lua )
 
 for file in ${FILES[@]}
 do
+  printf '\033[32m%s\033[m\n' "  $file creating..."
   curl -fsSL https://raw.githubusercontent.com/gotokazuki/dotfiles/main/files/$TOOL_NAME/$file -o $CONFIG_HOME/$file
   printf '\033[32m%s\033[m\n' "$file is created"
 done
