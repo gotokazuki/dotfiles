@@ -1,0 +1,24 @@
+theme = Catppuccin Mocha
+
+window-width = 300
+window-height = 100
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+
+background-opacity = 0.85
+background-blur-radius = 18
+
+macos-titlebar-style = transparent
+
+font-family = Monaspace Krypton Var
+font-feature = -dlig, +ss01, +zero
+font-size = 14
+font-style-bold = false
+font-style-italic = false
+font-style-bold-italic = false
+
+mouse-hide-while-typing = true
+resize-overlay = never
+
+macos-titlebar-proxy-icon = hidden

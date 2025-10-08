@@ -1,38 +1,64 @@
-brew "aws-vault"
-brew "awscli"
+# core cli
+brew "eza"
 brew "ccat"
 brew "colordiff"
-brew "eza"
-brew "fzf"
+brew "grep"
+brew "gnu-sed"
+brew "jq"
+brew "yq"
+brew "wget"
+brew "git-delta"
+brew "macchina"
+
+# dev tools
+brew "gitui"
 brew "ghq"
 brew "gibo"
-brew "gitui"
-brew "gnu-sed"
-brew "grep"
-brew "jq"
+brew "tfenv"
+brew "volta"
+brew "awscli"
+brew "aws-vault"
+brew "jwt-cli"
+
+# cloud native
 brew "k9s"
 brew "kubernetes-cli"
-brew "neovim"
-brew "macchina"
-brew "starship"
-brew "tfenv"
-brew "tree"
-brew "wget"
-brew "volta"
-brew "yq"
 
+# terminal, shell
+brew "fzf"
+brew "starship"
+brew "neovim"
+
+# lsp
+brew "lua-language-server"
+
+# applications
+
+## browser
 cask "arc"
-cask "bitwarden"
-cask "font-symbols-only-nerd-font"
-cask "font-monaspace"
-cask "google-japanese-ime"
+
+## communications
 cask "microsoft-teams"
-cask "parallels-client"
-cask "rancher"
-cask "raycast"
 cask "slack"
+
+## utils
+cask "raycast"
 cask "stats"
-cask "utm"
+cask "proton-mail"
+cask "proton-pass"
+
+## IDE
 cask "visual-studio-code"
-cask "wezterm@nightly"
 cask "zed"
+cask "kiro"
+
+## docker
+cask "orbstack"
+
+## terminal
+cask "ghostty"
+
+# fonts
+cask "font-symbols-only-nerd-font"
+cask "font-hack-nerd-font"
+cask "font-monaspace"

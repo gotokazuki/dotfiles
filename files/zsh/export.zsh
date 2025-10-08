@@ -14,6 +14,7 @@ export XDG_DATA_HOME=$XDG_HOME/.local/share
 export XDG_STATE_HOME=$XDG_HOME/.local/state
 
 # fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
 export FZF_DEFAULT_OPTS='--height 100% --reverse --border'
 
