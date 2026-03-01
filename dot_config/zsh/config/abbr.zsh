@@ -37,3 +37,7 @@ abbr git --force --quiet chp="cherry-pick"
 abbr git --force --quiet lg="log --graph --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 abbr git --force --quiet lga="log --graph --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all"
 abbr git --force --quiet lgns="log --graph --color --decorate --oneline --name-status"
+
+# yazi
+abbr --force --quiet y='yazi'
+

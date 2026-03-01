@@ -57,4 +57,4 @@
 [status]
   submoduleSummary = true
 [includeIf "gitdir:~/ghq/github.com/"]
-  path = ~/.config/git/.gitconfig.github
+  path = ~/.config/git/config.github
