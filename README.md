@@ -1,63 +1,46 @@
 # dotfiles
 
-## 前準備
+## 概要
 
-いくつか事前に手動でインストールする
+chezmoi を利用し、dotfiles を構築する。
 
-### Xcode Command Line Tools
+## 手順
 
-インストール
-確認ダイアログあり
-数分かかる
+### Homebrew と chezmoi のインストール
+
+[Homebrew](https://brew.sh)　をインストールし、chezmoi をインストールする。
+Homebrew をインストールする過程で、Xcode Command Line Tools もインストールされる。
 
 ```shell
-xcode-select --install
+# brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# chezmoi
+brew install chezmoi
 ```
 
-確認
+### chezmoi を使って dotfiles のセットアップ
 
 ```shell
+chezmoi init {gh-username}
+```
+
+## その他
+
+#### Xcode Command Line Tools
+
+Xcode Command Line Tools を単体でインストールする場合は以下を実行する。
+
+```shell
+# インストール
+xcode-select --install
+# 確認
 xcode-select -p
 ```
 
-### Homebrew
+### NeoVim
 
-インストール
-パスワード入力あり
-確認あり
-
-```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-https://brew.sh
-
-### brew bundle
-
-```shell
-/opt/homebrew/bin/brew bundle -v --file=<(curl -fsSL https://raw.githubusercontent.com/gotokazuki/dotfiles/main/files/homebrew/Brewfile)
-```
-
-## 設定
-
-### macOS, Git, Zsh, Neovim などの設定
-
-以下のスクリプトを実行する
-
-```shell
-curl -fsSL https://raw.githubusercontent.com/gotokazuki/dotfiles/main/initialize.sh | zsh
-```
-
-### Git User と Email を設定する
-
-`.gitconfig.github` の内容を自分のアカウントの情報に変更する
-
-### vim
-
-適当なファイルを NeoVim で開く
-`:Lazy sync` によりインストールされる
-
-## その他
+適当なファイルを NeoVim で開く。
+`:Lazy sync` によりインストールされる。
 
 ### ssh key を作る
 
@@ -65,7 +48,7 @@ curl -fsSL https://raw.githubusercontent.com/gotokazuki/dotfiles/main/initialize
 ssh-keygen -t ed25519 -C "{your_email_address}"
 ```
 
-passphrase は最低でも 10 桁以上にする
+passphrase は 10 桁以上にするのが安全。
 
 ### ssh key の passphrase を KeyChain に登録する
 
@@ -77,7 +60,7 @@ Identity added: /Users/{user_name}/.shh/id_ed25519
 
 ### ssh passphrase 入力の省略
 
-`~/.ssh/config` を作成する
+`~/.ssh/config` を作成する。
 
 ```
 Host *
