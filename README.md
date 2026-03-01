@@ -23,7 +23,7 @@ brew install chezmoi
 dotfiles repo で管理するファイルを `~/.local/share/chezmoi/` にダウンロードする。
 
 ```shell
-chezmoi init {gh-username}
+chezmoi init --ssh {gh-username}
 ```
 
 ### chezmoi の適用
