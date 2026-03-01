@@ -1,0 +1,14 @@
+export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+eval "$($XDG_CONFIG_HOME/.rz/bin/rz init)"
+
+[ -r "$ZDOTDIR/config/abbr.zsh" ] && source $ZDOTDIR/config/abbr.zsh
+[ -r "$ZDOTDIR/config/base.zsh" ] && source $ZDOTDIR/config/base.zsh
+[ -r "$ZDOTDIR/config/export.zsh" ] && source $ZDOTDIR/config/export.zsh
+[ -r "$ZDOTDIR/config/function.zsh" ] && source $ZDOTDIR/config/function.zsh
+[ -r "$ZDOTDIR/config/opt.zsh" ] && source $ZDOTDIR/config/opt.zsh
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+eval "$(starship init zsh)"
+

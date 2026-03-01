@@ -1,0 +1,9 @@
+setopt hist_reduce_blanks
+setopt hist_ignore_dups
+setopt extended_history
+setopt share_history
+setopt hist_save_no_dups
+setopt nonomatch
+setopt print_eight_bit
+setopt auto_pushd
+setopt auto_cd

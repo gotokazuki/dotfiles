@@ -1,0 +1,26 @@
+echo $ZDOTDIR
+mkdir -p $ZDOTDIR
+cd $ZDOTDIR
+ls
+touch .zshrc
+vi .zshrc
+rz list
+rz sync
+chezmoi add ~/.config/zsh/
+ls
+pwd
+cd config
+mkdir config
+cd config
+echo 'export.zsh base.zsh abbr.zsh opt.zsh function.zsh'
+echo 'export.zsh base.zsh abbr.zsh opt.zsh function.zsh' | xargs touch
+ls
+ssh-keygen -t ed25519 -C "gotokazuki@pm.me"
+ssh-add -K ~/.ssh/id_ed25519
+ls
+cd ~
+ls
+cd .ssh/
+ls
+touch config
+vi config
