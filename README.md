@@ -20,6 +20,9 @@ brew install chezmoi
 
 ### dotfiles のダウロード
 
+> [!NOTE]
+> `--ssh` フラグは HTTPS の代わりに SSH を使うため、事前に SSH 公開鍵を GitHub に登録する必要がある。
+
 dotfiles repo で管理するファイルを `~/.local/share/chezmoi/` にダウンロードする。
 
 ```shell
