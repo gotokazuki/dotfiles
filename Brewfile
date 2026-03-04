@@ -1,0 +1,71 @@
+# core cli
+brew "eza"
+brew "ccat"
+brew "colordiff"
+brew "grep"
+brew "gnu-sed"
+brew "jq"
+brew "yq"
+brew "wget"
+brew "zoxide"
+brew "git-delta"
+brew "macchina"
+brew "yazi"
+
+# dev tools
+brew "gitui"
+brew "ghq"
+brew "gibo"
+brew "tfenv"
+brew "volta"
+brew "awscli"
+brew "aws-vault"
+brew "jwt-cli"
+brew "lua-language-server"
+
+# gen AI
+brew "gemini-cli"
+
+# cloud native
+brew "k9s"
+brew "kubernetes-cli"
+
+# shell
+brew "fzf"
+brew "starship"
+brew "neovim"
+
+# browser
+cask "zen"
+
+# communications
+cask "microsoft-teams"
+cask "slack"
+
+# utils
+cask "raycast"
+cask "stats"
+cask "proton-mail"
+cask "proton-pass"
+cask "utm"
+
+# IDE
+cask "visual-studio-code"
+cask "zed"
+cask "kiro"
+cask "antigravity"
+cask "obsidian"
+
+# docker
+cask "orbstack"
+
+# terminal
+cask "ghostty"
+
+# fonts
+cask "font-symbols-only-nerd-font"
+cask "font-hack-nerd-font"
+cask "font-monaspace"
+
+# IME
+cask "azookey"

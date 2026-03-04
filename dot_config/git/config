@@ -58,5 +58,7 @@
   submoduleSummary = true
 [includeIf "gitdir:~/ghq/github.com/"]
   path = ~/.config/git/config.github
+[includeIf "gitdir:~/ghq/gitlab.com/"]
+  path = ~/.config/git/config.gitlab
 [includeIf "gitdir:~/.local/share/chezmoi/"]
   path = ~/.config/git/config.github
